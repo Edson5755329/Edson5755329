@@ -1,25 +1,37 @@
-function calcularMediaAritmetica(lista){
-const sumaLista=lista.reduce(
-    function(valorAcumulado=0,nuevoElemento){
-        return valorAcumulado+nuevoElemento;
-    });
-const promedioLista=sumaLista/lista.length;
-return promedioLista;
-}
-const lista1=[100,200,500,400000000,];
-const mitadLista1=parseInt(lista1.length/2);
-function esPar(numerito){
-    if(numerito%2===0){return true;
+
+function obtenerMediana(numeros) {
+    if (!Array.isArray(numeros)) {
+        throw TypeError('El argumento debe ser un arreglo.');
     }
-    else{return false;}
+
+    if (!numeros.every(e => typeof e === 'number')) {
+        throw TypeError('Todos los elementos del arreglo deben ser números.');
+    }
+
+    numeros = numeros.sort((x, y) => x - y);
+    let mitad = Math.floor(numeros.length / 2);
+
+    return numeros.length % 2 == 1 ? numeros[mitad] : (numeros[mitad - 1] + numeros[mitad + 2]) / 2;
 }
-let mediana;
-if(esPar(lista1.length)){
-    const elemento1=lista1[mitadLista1-1];
-    const elemento2=lista1[mitadLista1];
-    const promedioElemento1y2=calcularMediaAritmetica([elemento1,elemento2,]);
-    mediana=promedioElemento1y2;
+
+try {
+    console.log(obtenerMediana([10, 12, 100, 2, -10])); // 10
+} catch (e) {
+    console.log(`Error: ${e.message}`);
 }
-else{
-    mediana=lista1[mitadLista1];
+
+console.log();
+
+try {
+    console.log(obtenerMediana({a: 1})); // Error
+} catch (e) {
+    console.log(`Error: ${e.message}`);
+}
+
+console.log();
+
+try {
+    console.log(obtenerMediana([10, 12, 100, 'a', -10])); // Error
+} catch (e) {
+    console.log(`Error: ${e.message}`);
 }
