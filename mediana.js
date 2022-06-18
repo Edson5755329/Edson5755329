@@ -12,27 +12,5 @@ function obtenerMediana(numeros) {
     
     let mitad = Math.floor((numeros.length) / 2);
 
-    return numeros.length % 2 == 1 ? numeros[mitad] : Math.floor(numeros.length - 1) +  Math.floor(numeros.length + 2) / 2;
-}
-
-try {
-    console.log(obtenerMediana([10, 12, 100, 2, -10])); // 10
-} catch (e) {
-    console.log(`Error: ${e.message}`);
-}
-
-console.log();
-
-try {
-    console.log(obtenerMediana({a: 1})); // Error
-} catch (e) {
-    console.log(`Error: ${e.message}`);
-}
-
-console.log();
-
-try {
-    console.log(obtenerMediana([10, 12, 100, 'a', -10])); // Error
-} catch (e) {
-    console.log(`Error: ${e.message}`);
+    return numeros.length % 2 == 1 ? numeros[mitad] : (numeros[mitad - 1] + numeros[mitad + 2]) / 2;
 }
