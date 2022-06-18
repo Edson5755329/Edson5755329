@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Practico</title>
+</head>
+<body>
+    <header>
+        <h1>Figuras Geometricas</h1>
+        <p>Este es el primer taller del curso practico de JS</p>
+    </header>
+    <section>
+        <h2>Calcula el area y perimetro de un cuadrado</h2>
+        <form>
+            <label for="InputCuadrado">
+                Escribe cuanto mide cada lado de un cuadrado
+            </label>
+            <input id="InputCuadrado" type="number"/>
+
+
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+                Calcular perimetro
+            </button>
+            <button type="button" onclick="calcularAreaCuadrado()">
+                Calcular area
+            </button>
+            <p id="Resultp"></p>
+           
+        </form>
+        <form>
+        <h2>Calcula la altura de un triangulo isósceles.</h2>
+        <label for="InputTrianguloA">
+            Escribe lado del triangulo A
+        </label>
+        <input id="InputTrianguloA" type="number"/>
+        
+        <label  for="InputTrianguloB">
+            Escribe lado del triangulo B
+        </label>
+        <input id="InputTrianguloB" type="number"/>
+
+        <label for="InputTrianguloBase">
+            Escribe la base del triangulo
+        </label>  
+        <input id="InputTrianguloBase" type="number"/>
+
+
+        <button type="button" onclick="calcularAltura()">
+            Calcular altura
+        </button>
+       
+        <p id="Rsultado"></p>
+        </form>
+    </section>
+    
+    <script src="./figuras.js"></script>
+</body>
+</html>
