@@ -12,7 +12,7 @@ function obtenerMediana(numeros) {
     
     let mitad = Math.floor(numeros.length / 2);
 
-    return numeros.length % 2 == 1 ? numeros[mitad] : (numeros[mitad-1] + numeros[mitad]) / 2;
+    return numeros.length % 2 == 1 ? numeros[mitad] : (numeros[mitad+1] + numeros[mitad+2]) / 2;
 }
 
 try {
