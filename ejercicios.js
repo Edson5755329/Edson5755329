@@ -95,7 +95,13 @@ function invertir(str) {
  * equisPorciento(10,120) //devuelve: 12
  * equisPorciento(20,100)//devuelve: 20
  */
+ function equisPorciento(x,y){
 
+
+
+    return y*(x/100) ;
+}
+ 
 /**Ejercicio
  * Dado dos numeros devolver cuantos numeros IMPARES hay entre ellas.
  * Ejemplo:
