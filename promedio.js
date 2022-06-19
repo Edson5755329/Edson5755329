@@ -1,7 +1,7 @@
 function promedio2(a,b,c){
     const aa=parseFloat(a);
-    const bb=parseFloat(a);
-    const cc=parseFloat(a);
+    const bb=parseFloat(b);
+    const cc=parseFloat(c);
     return (aa+bb+cc)/3;
  }
 function calcularPromedioAritmetica(){
