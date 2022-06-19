@@ -14,7 +14,7 @@ function calcularPrecioConCupon(precio2,cupon){
         case "CUPON30%":
             return precio2-(precio2*0.3);
         default:
-            return'Sin cupon' ;
+            return precio2+'Sin cupon' ;
     }
 
   
