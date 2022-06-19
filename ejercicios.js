@@ -81,6 +81,13 @@ Ejemplo:
 invertir("hola") //devuelve: "aloh"
 invertir("quique") //devuelve: "euqiuq"
  */
+function invertir(str) {
+ 
+    var reverseStr = str.split('').reverse().join(''); 
+    return reverseStr;
+  }
+  invertir("hola")
+
 
 /**Ejercicio
  * ¿Cuanto es el X por ciento de Y?
