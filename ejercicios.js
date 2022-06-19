@@ -60,6 +60,20 @@ palindromo("ana")//devuelve: true
 *countCoincide("juan hace el paso de anita","anito")//devuelve:0
 */
 
+function countCoincide(texto, palabra) {
+    if (!palabra.length) {
+        return 0;
+    }
+
+    let resultado = palabra.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    return (texto.match(new RegExp(resultado, 'gi')) || []).length;
+}
+countCoincide("el multiverso de marvel es mejor que el multiverso de DC","multiverso")
+2
+countCoincide("juan hace el paso de anita","anito")
+0
+
 /*Ejercicio
 Dado una cadena de texto, darle la vuelta e invertir el orden de sus caracteres, sin usar metodos propios del lenguaje, 
 solo estructuras de control
